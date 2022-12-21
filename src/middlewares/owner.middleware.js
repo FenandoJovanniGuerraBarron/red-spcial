@@ -8,7 +8,7 @@ const ownerValidate = (req,res,next)=>{
         if (data.userId == userId) {
             next()
         }else{
-            res.status(400).json({message: 'Only the owner can delete it'})
+            res.status(400).json({message: 'You do not have the permissions to perform this action'})
         }
     })
     .catch(err=> res.status(400).json({message: err.message}))
