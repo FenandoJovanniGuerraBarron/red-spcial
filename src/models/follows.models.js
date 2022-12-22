@@ -11,7 +11,7 @@ const Follows = db.define('follows', {
     userId:{
         type: DataTypes.UUID,
         allowNull: false,
-        field: 'follower',
+        field: 'followingId',
         comment: 'Follower',
         references: {
             key: 'id',
@@ -21,7 +21,7 @@ const Follows = db.define('follows', {
     userId2:{
         type: DataTypes.UUID,
         allowNull: false,
-        field: 'followed',
+        field: 'followersId',
         comment: 'Followed',
         references: {
             key: 'id',
